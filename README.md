@@ -13,3 +13,5 @@ GoLang training material and examples
 - Go playground (https://go.dev/play/)
 - Hello world example
 - Hello web example
+
+## Day 2
