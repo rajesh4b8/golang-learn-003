@@ -4,3 +4,4 @@
 | -----------   | ----------------  | ------------- | -------------- | --------------- |
 | Rajesh        | Windows           | Yes           | Yes            | Yes             |
 | Raja Vamsi    | Windows           | Yes           | Yes            | Yes             |
+| Vamsi Kishore | Windows           | Yes           | Yes            | Yes             |
