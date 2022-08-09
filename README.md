@@ -77,3 +77,30 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 - Variables can only be declared once in the scope
 - `:=` is used to declare and initialize
 - Go is strcitly type language
+
+## Day 4
+
+### Constants
+
+- `const` is the keyword
+- values that are constant and will not be changed
+
+### Access Control
+
+- naming starts with lower case -> package scope, only visisble inside the package
+- naming starts with upper case -> exported from pacakge
+
+### Functions
+
+- first class citizens -> you pass the functions as an input
+- follow the examples for different ways
+
+### Use Case: playing cards
+
+- Deck of cards functionality
+  - New Deck
+  - Print Deck
+  - Shuffle
+  - Deal
+  - Save to File
+  - Read from File
