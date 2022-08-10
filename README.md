@@ -104,3 +104,38 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
   - Deal
   - Save to File
   - Read from File
+
+  ## Day 5
+
+### Zero values
+
+- Variables declared without an explicit initial value are given their zero value.
+- `0` for numeric types,
+- `false` for the boolean type
+- `""` (the empty string) for strings
+
+| Type          | Zero Value  |
+| -----------   | ----------- |
+| Integer       | 0           |
+| Floating point| 0.0         |
+| Boolean       | false       |
+| String        | ""          |
+| Pointer       | nil         |
+| Interface     | nil         |
+| Slice         | nil         |
+| Map           | nil         |
+| Channel       | nil         |
+| Function      | nil         |
+
+## Arrays / Slices
+
+- An array has a fixed size. A slice, on the other hand, is a dynamically-sized, flexible view into the elements of an array. In practice, slices are much more common than arrays.
+- Index starts with 0
+- Slices are reference data types points to underlying array -> when the array is updated the slice also updated.
+- A slice is formed by specifying two indices, a low and high bound, separated by a colon:
+  `a[low : high]`
+- Practically we use `make()` to create slices directly.
+
+### Assignment one
+
+- Create and return the deck of cards with the defined suits and numbers
