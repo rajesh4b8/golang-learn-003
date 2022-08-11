@@ -2,5 +2,6 @@ package main
 
 func main() {
 	deck := createNewDeck()
-	print(deck)
+	deck.shuffle()
+	deck.print()
 }

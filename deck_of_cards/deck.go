@@ -19,13 +19,25 @@ func createNewDeck() Deck {
 	return deck
 }
 
-func print(d Deck) {
-	for i, card := range d {
-		fmt.Println(i, card)
-	}
-
+// this is function and deck passed as param
+func printFunc(d Deck) {
 	// blank reference `_` if you don't want to use index
 	for _, card := range d {
 		fmt.Println(card)
 	}
+}
+
+// this is method defined on type "Deck"
+func (d Deck) print() {
+	for i, card := range d {
+		fmt.Println(i, card)
+	}
+}
+
+func (d Deck) shuffle() {
+	// iterate over all the elements
+	// switch with a random position
+
+	// how to switch values?
+	// d[0], d[15] = d[15], d[0]
 }

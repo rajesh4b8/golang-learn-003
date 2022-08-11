@@ -136,7 +136,7 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
   `a[low : high]`
 - Practically we use `make()` to create slices directly.
 
-### Assignment one
+### Assignment 1
 
 - Create and return the deck of cards with the defined suits and numbers
 
@@ -148,4 +148,7 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
   - src/: location of Go source code (for example, .go, .c, .g, .s).
   - pkg/: location of compiled package code (for example, .a).
   - bin/: location of compiled executable programs built by Go.
-  
+
+### Assignment 2
+
+- Shuffle the cards after creating a deck
