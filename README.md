@@ -139,3 +139,13 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 ### Assignment one
 
 - Create and return the deck of cards with the defined suits and numbers
+
+### GOPATH / GOROOT
+
+- GOROOT is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions.
+
+- GOPATH is a variable that defines the root of your workspace. By default, the workspace directory is a directory that is named go within your user home directory (~/go for Linux and MacOS, %USERPROFILE%/go for Windows). GOPATH stores your code base and all the files that are necessary for your development. You can use another directory as your workspace by configuring GOPATH for different scopes. GOPATH is the root of your workspace and contains the following folders:
+  - src/: location of Go source code (for example, .go, .c, .g, .s).
+  - pkg/: location of compiled package code (for example, .a).
+  - bin/: location of compiled executable programs built by Go.
+  
