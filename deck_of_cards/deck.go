@@ -5,17 +5,17 @@ import "fmt"
 type Deck []string
 
 func createNewDeck() Deck {
-	card1 := "Ace of Spades"
-	card2 := "Two of Diamonds"
-
-	var deck []string = []string{card1, card2}
-	deck = append(deck, "Four of Hearts")
-
-	// suits := []string{"Spades", "Diamonds", "Clubs", "Hearts"}
-	// numbers := []string{"Ace", "Two", "Three", "Four"}
+	var deck []string
+	suits := []string{"Spades", "Diamonds", "Clubs", "Hearts"}
+	numbers := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
 
 	// TODO create a deck of cards and return
-
+	for i := 0; i < len(numbers); i++ {
+		for j := 0; j < len(suits); j++ {
+			card := numbers[i] + " of " + suits[j]
+			deck = append(deck, card)
+		}
+	}
 	return deck
 }
 
