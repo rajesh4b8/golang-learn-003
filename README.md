@@ -105,7 +105,7 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
   - Save to File
   - Read from File
 
-  ## Day 5
+## Day 5
 
 ### Zero values
 
@@ -152,3 +152,13 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 ### Assignment 2
 
 - Shuffle the cards after creating a deck
+
+## Day 6
+
+### Type conversions
+
+- For converting compatible types you just use `new_type(old_value)`
+
+### Assignment 3
+
+- Deck of cards - Read from file
