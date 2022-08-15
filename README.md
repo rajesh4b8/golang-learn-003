@@ -162,3 +162,28 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 ### Assignment 3
 
 - Deck of cards - Read from file
+
+## Day 8
+
+### Structs
+
+- What is Struct?
+- Definition
+- Declaration without initialization -> init with zero values
+- Declaration with initialization
+- Embedded structs -> one struct inside another struct
+
+### Pass by Value
+
+- When we pass any arg to a function or method the values will be copied in memory
+
+### Pointers
+
+- Use `&` to access the pointer (address)
+- Use `*` to access the value from pointer
+- `*` is used infront of a type to indicate it's a pointer type
+- pointer indirection
+
+### Assignment 4
+
+- Update the deck of cards from `[]string` to `struct`
