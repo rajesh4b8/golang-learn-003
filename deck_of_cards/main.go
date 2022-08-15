@@ -15,6 +15,7 @@ func main() {
 	// deal.print()
 	// fmt.Println("Remaining pack")
 	// remaining.print()
+
 	err := deck.saveToFile("myDeck.txt")
 	if err != nil {
 		fmt.Println("Error while saving to file", err)

@@ -78,13 +78,14 @@ func (d Deck) saveToFile(fileName string) error {
 }
 
 func ReadFromFile(fileName string) Deck {
-		data, err := os.ReadFile("myDeck.txt")
-	//fmt.Println(data)
-	data1 := strings.Split(string([]byte(data)), ",")
-	//fmt.Println(data2)
+	data, err := os.ReadFile("myDeck.txt")
+
 	if err != nil {
 		fmt.Println("Error while saving to file", err)
 		os.Exit(1)
 	}
-	return data1
+
+	deck := strings.Split(string(data), ",")
+
+	return deck
 }
