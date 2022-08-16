@@ -131,7 +131,7 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 
 - An array has a fixed size. A slice, on the other hand, is a dynamically-sized, flexible view into the elements of an array. In practice, slices are much more common than arrays.
 - Index starts with 0
-- Slices are reference data types points to underlying array -> when the array is updated the slice also updated.
+- Slices are reference data types points to underlying array -> when the slice is updated the underlying array also updated.
 - A slice is formed by specifying two indices, a low and high bound, separated by a colon:
   `a[low : high]`
 - Practically we use `make()` to create slices directly.
@@ -187,3 +187,53 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 ### Assignment 4
 
 - Update the deck of cards from `[]string` to `struct`
+
+## Day 9
+
+### Value Types / Reference Types
+
+- When you pass the value type as param -> data is duplicated and any modifications will not update the original
+- When you pass the reference type as param -> ref is duplicated but the underlying data is same, any modifications will result in updating the original
+
+| Value Type       | Referece Type |
+| ---------------- | ------------- |
+| int              | slices        |
+| float            | maps          |
+| string           | channels      |
+| bool             | pointers      |
+| structs          | functions     |
+| arrays           |      |
+
+### Maps
+
+- Map data structure -> a list of key / value pairs
+- A key / value pair is called Entity
+- All the keys are of same type
+- All the valyes are of same type
+
+| Map                 | Struct               |
+|-------------------- |----------------------|
+| All keys - same type| different types      |
+| related properties  | represent something    |
+| All values - same type|can be different |
+| keys - can be added | Define them at compile time |
+| keys are indexed    | keys not indexed |
+| Reference Type      | Value Type |
+
+### make vs new
+
+- The new built-in function allocates memory, the value returned is a pointer to a newly allocated zero value of that type.
+- The make built-in function allocates and initializes an object of type slice, map, or chan (only).
+
+### Assignment 5
+
+- Print numbers from 1 to 10 and print whether it's even or odd
+- Sample output
+
+``` text
+1 - odd
+2 - even
+3 - odd
+4 - even
+...
+```

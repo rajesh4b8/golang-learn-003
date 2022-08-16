@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// create an array
@@ -58,4 +60,7 @@ func main() {
 
 	s1 = []int{0, 1, 1, 2, 3, 5, 8, 11}
 	fmt.Println("Lenth:", len(s1), "Cotenents:", s1, "Capacity:", cap(s1))
+
+	// declartion only for slice -> zero value is nil -> use make()
+	// var s4 []string
 }
