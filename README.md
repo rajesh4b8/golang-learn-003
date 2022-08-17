@@ -237,3 +237,17 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 4 - even
 ...
 ```
+
+## Day 10
+
+### Interfaces
+
+- An interface type in Go is kind of like a definition. It defines and describes the exact methods that some other type must have.
+- To implement an interface
+  - No need to explicitly mention it implements
+  - No `implmenents` or `entends` keywords to say the struct implement the interface
+  - Interfaces are implemented implicitly, A type implements an interface by implementing its methods.
+
+### Assignment 6
+
+- New Income stream rental income inside the `./examples/interfaces`
