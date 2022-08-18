@@ -52,6 +52,17 @@ func (a Advertisement) calculate() int {
 
 // Assignment create a income stream for rental income
 // Define a new strut with propertyName, monthlyRent, calculate rent for one year
+type RentalIncome struct {
+	propertyName string
+	monthlyRent  int
+}
+
+func (r RentalIncome) source() string {
+	return r.propertyName
+}
+func (r RentalIncome) calculate() int {
+	return r.monthlyRent * 12
+}
 
 func main() {
 	p1 := FixedBilling{"prj 1", 2000}
@@ -59,11 +70,12 @@ func main() {
 	p3 := TimeAndMaterial{"prj 3", 2, 100}
 	p4 := TimeAndMaterial{"prj 4", 4, 100}
 	p5 := Advertisement{"add 1", 10000, 1}
+	p6 := RentalIncome{"Newyork", 20000}
 
 	// calculate net income
 	// income := p1.bidAmount + p2.calculateIncome() + p3.calculateIncome()
 	// fmt.Println("Total income", income)
-	calculateNetIncome([]Income{p1, p2, p3, p4, p5})
+	calculateNetIncome([]Income{p1, p2, p3, p4, p5, p6})
 }
 
 func calculateNetIncome(steams []Income) {
