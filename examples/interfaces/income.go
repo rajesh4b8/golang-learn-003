@@ -1,52 +1,57 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Income interface {
-	source() string
-	calculate() int
+	source() string // method to get the source of income
+	calculate() int // method to calculate and return the total income
 }
 
-type FixedBilling struct {
+// fixedBilling implementing Income
+type fixedBilling struct {
 	projectName string
 	bidAmount   int
 }
 
-func (f FixedBilling) source() string {
+func (f fixedBilling) source() string {
 	return f.projectName
 }
 
-func (f FixedBilling) calculate() int {
+func (f fixedBilling) calculate() int {
 	return f.bidAmount
 }
 
-type TimeAndMaterial struct {
+type timeAndMaterial struct {
 	projectName string
 	noOfHours   int
 	hourlyRate  int
 }
 
-func (t TimeAndMaterial) source() string {
+func (t timeAndMaterial) source() string {
 	return t.projectName
 }
 
-func (t TimeAndMaterial) calculate() int {
+func (t timeAndMaterial) calculate() int {
 	return t.noOfHours * t.hourlyRate
 }
 
-type Advertisement struct {
+type advertisement struct {
 	addName      string
 	noOfClick    int
 	ratePerClick int
+	company      string
 }
 
 // Implment this method `source() string` for Advertisement
-func (a Advertisement) source() string {
+func (a advertisement) source() string {
 	return a.addName
 }
 
 // Implment this method `calculate() int` for Advertisement
-func (a Advertisement) calculate() int {
+func (a advertisement) calculate() int {
 	return a.noOfClick * a.ratePerClick
 }
 
@@ -54,16 +59,21 @@ func (a Advertisement) calculate() int {
 // Define a new strut with propertyName, monthlyRent, calculate rent for one year
 
 func main() {
-	p1 := FixedBilling{"prj 1", 2000}
-	p2 := TimeAndMaterial{"prj 2", 10, 40}
-	p3 := TimeAndMaterial{"prj 3", 2, 100}
-	p4 := TimeAndMaterial{"prj 4", 4, 100}
-	p5 := Advertisement{"add 1", 10000, 1}
+	var p1 Income = fixedBilling{"prj 1", 2000}
+	var p2 Income = timeAndMaterial{"prj 2", 10, 40}
+	p3 := timeAndMaterial{"prj 3", 2, 100}
+	p4 := timeAndMaterial{"prj 4", 4, 100}
+	p5 := advertisement{"add 1", 10000, 1, "Google"}
 
 	// calculate net income
 	// income := p1.bidAmount + p2.calculateIncome() + p3.calculateIncome()
 	// fmt.Println("Total income", income)
 	calculateNetIncome([]Income{p1, p2, p3, p4, p5})
+
+	var contents []byte = make([]byte, 10)
+	r := strings.NewReader("12345")
+	r.Read(contents)
+	fmt.Println("contents:", string(contents))
 }
 
 func calculateNetIncome(steams []Income) {
