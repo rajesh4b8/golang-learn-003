@@ -1,12 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Income interface {
-	source() string
-	calculate() int
+	source() string // method to get the source of income
+	calculate() int // method to calculate and return the total income
 }
 
+// fixedBilling implementing Income
 type FixedBilling struct {
 	projectName string
 	bidAmount   int
@@ -38,6 +42,7 @@ type Advertisement struct {
 	addName      string
 	noOfClick    int
 	ratePerClick int
+	company      string
 }
 
 // Implment this method `source() string` for Advertisement
@@ -69,13 +74,18 @@ func main() {
 	p2 := TimeAndMaterial{"prj 2", 10, 40}
 	p3 := TimeAndMaterial{"prj 3", 2, 100}
 	p4 := TimeAndMaterial{"prj 4", 4, 100}
-	p5 := Advertisement{"add 1", 10000, 1}
+	p5 := Advertisement{"add 1", 10000, 1, "Google"}
 	p6 := RentalIncome{"Newyork", 20000}
 
 	// calculate net income
 	// income := p1.bidAmount + p2.calculateIncome() + p3.calculateIncome()
 	// fmt.Println("Total income", income)
 	calculateNetIncome([]Income{p1, p2, p3, p4, p5, p6})
+
+	var contents []byte = make([]byte, 10)
+	r := strings.NewReader("12345")
+	r.Read(contents)
+	fmt.Println("contents:", string(contents))
 }
 
 func calculateNetIncome(steams []Income) {

@@ -247,7 +247,22 @@ https://about.gitlab.com/images/press/git-cheat-sheet.pdf
   - No need to explicitly mention it implements
   - No `implmenents` or `entends` keywords to say the struct implement the interface
   - Interfaces are implemented implicitly, A type implements an interface by implementing its methods.
+- What is the interface in OOP?
+An interface defines the behavior of an object. It only specifies what the object is supposed to do. It is actually a concept of abstraction and encapsulation
 
 ### Assignment 6
 
 - New Income stream rental income inside the `./examples/interfaces`
+
+## Day 11
+
+- More on interfaces
+
+### Unit Testing
+
+- To test a peiece of code in a func or method
+- using `testing` package
+
+### Assignment 7
+
+- Write more unit tests for deck of cards
