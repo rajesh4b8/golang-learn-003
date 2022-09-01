@@ -17,3 +17,10 @@ func TestNewDeck(t *testing.T) {
 		t.Errorf("Expected Four of Hearts but got %v", newDeck[15])
 	}
 }
+
+func TestDeal(t *testing.T) {
+	// Create a new deck
+	// call the deal with size
+	// test if the deal size is expected
+	// test if the remaing cards size is expected
+}
