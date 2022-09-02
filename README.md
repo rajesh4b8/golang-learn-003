@@ -266,3 +266,23 @@ An interface defines the behavior of an object. It only specifies what the objec
 ### Assignment 7
 
 - Write more unit tests for deck of cards
+
+
+### Channels
+
+- Channels are a typed conduit through which you can send and receive values with the channel operator `<-`
+  - `ch <- v`    // Send v to channel ch
+  - `v := <-ch`  // Receive from ch, and assign value
+- Channels are created for a single type
+- non-buffered channels
+  - 0 capcity
+  - used for synchronous communication
+  - You should have some goRoutine ready to recieve the data
+- Buffered channels
+  - capacity is defined
+  - error when you try to push to channel which is full
+  - async communication
+
+### Assignment 8
+
+- Print n numbers in fibonocci series with and without channels
